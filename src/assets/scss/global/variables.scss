@@ -1,0 +1,62 @@
+:root {
+  // responsive sizes
+  --xs: 0px;
+  --sm: 576px;
+  --md: 768px;
+  --lg: 992px;
+  --xl: 1200px;
+  --xxl: 1400px;
+
+  // base area
+  --main-size: 99vh;
+  --portrait: 0.56;
+  --landscape: 1.77;
+  --ratio: var(--portrait);
+
+  // base fonts
+  --font-primary: "Circular-Std-Book", sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
+
+  --font-size-md: 16px;
+}
+
+
+
+// Screen size
+$xs: 0px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$xs-color: white;
+$sm-color: lightblue;
+$md-color: pink;
+$lg-color: yellow;
+$xl-color: lightsalmon;
+$xxl-color: lightgreen;
+
+$xs-color: transparent;
+$sm-color: transparent;
+$md-color: transparent;
+$lg-color: transparent;
+$xl-color: transparent;
+$xxl-color: transparent;
+
+$Azul: #3368b2;
+$Fusia: #ed4e8f;
+$Oceano: #1a223e;
+$Forex_1: #3eb03f;
+$Forex_2: #045004;
+$Futuros_1: #Ffaa29;
+$Acciones_1: #29a5ff;
+$Acciones_2: #1868a1;
+$Binarias_1: #C729ff;
+$Binarias_2: #c729ff;
+$Binarias_2: #740C98;
+$Gris: #B8B8B8;
+
+$stroke_selected: linear-gradient(264.81deg, #3368B2 1.67%, #ED4E8F 99.06%);
+
+

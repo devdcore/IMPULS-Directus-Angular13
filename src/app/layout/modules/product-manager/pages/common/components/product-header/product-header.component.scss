@@ -1,0 +1,109 @@
+.container-agency-header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ffffff;
+    width: 100%;
+    height: 10vh;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.menu-header,
+.menu-header ul,
+.menu-header li,
+.menu-header a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.menu-header {
+    background-color: #ccc;
+    border-radius: 7px;
+}
+
+.menu-header li {
+    position: relative;
+    list-style: none;
+    float: left;
+    display: block;
+    height: 40px;
+}
+
+.menu-header a {
+    display: block;
+    padding: 0 23px;
+    margin: 6px 0;
+    line-height: 28px;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    color: #3b3b3b;
+    transition: color 0.2s ease-in-out;
+}
+
+.menu-header li:firs-child a {
+    border-left: none;
+}
+
+.menu-header li:last-child a {
+    border-right: none;
+}
+
+.menu-header li>a {
+    display: flex;
+    align-items: center;
+}
+
+.menu-header li:hover>a {
+    color: #1e375b;
+}
+
+.material-icons {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-header ul {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    opacity: 0;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    transition: opacity 0.2s ease 0.1s;
+}
+
+.menu-header li:hover>ul {
+    opacity: 1;
+}
+
+.menu-header ul li {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: height 0.25s ease 0.1s;
+}
+
+.menu-header li:hover>ul li {
+    height: 36px;
+    overflow: visible;
+    padding: 0;
+}
+
+.menu-header ul li a {
+    width: 130px;
+    padding: 4px 10px;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #353539;
+}
+
+.menu-header ul li:last-child a {
+    border: none;
+}

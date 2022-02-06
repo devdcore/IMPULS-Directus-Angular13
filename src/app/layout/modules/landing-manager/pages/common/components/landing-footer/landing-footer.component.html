@@ -1,0 +1,20 @@
+<article class="footer__area disabled">
+  <!-- !isLogged -->
+  <section *ngIf="!stateTemp.accessControl.isLogged">
+    <div class="flex align-items-center" style="gap: 1rem">
+      <span class="material-icons">lock_open</span>
+      <span class="footer_area--text">
+        {{ TEMPLATE_TEXT.signedOut }}
+      </span>
+    </div>
+  </section>
+  <!-- isLogged -->
+  <section *ngIf="stateTemp.accessControl.isLogged">
+    <div class="flex align-items-center" style="gap: 1rem">
+      <span class="material-icons">lock</span>
+      <span class="footer_area--text">
+        {{ TEMPLATE_TEXT.authenticated }}
+      </span>
+    </div>
+  </section>
+</article>

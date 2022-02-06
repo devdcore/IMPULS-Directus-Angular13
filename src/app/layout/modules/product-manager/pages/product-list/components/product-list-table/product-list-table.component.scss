@@ -1,0 +1,44 @@
+.table_title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.table_subtitle {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+.p-inputtext {
+  background-color: yellow !important;
+  width: auto;
+  font-size: 0.8rem;
+}
+
+.caption {
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1 rem;
+}
+
+.caption {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ng-star-inserted {
+}
+
+.p-element .p-sortable-column,
+th,
+td {
+  font-size: 0.8rem !important;
+}
+
+.search_area {
+  max-width: 20%;
+}

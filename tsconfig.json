@@ -1,0 +1,49 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "es2020",
+    "paths": {
+      "assets": ["src/assets"],
+      "@assets/*": ["src/assets/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@access-manager/*": ["src/app/shared/modules/access-manager/*"],
+      "@shared-manager/*": ["src/app/shared/modules/shared-manager/*"],
+      "@agency-manager/*": ["src/app/layout/modules/agency-manager/*"],
+      "@user-manager/*": ["src/app/layout/modules/user-manager/*"],
+      "@quote-manager/*": ["src/app/layout/modules/quote-manager/*"],
+      "@lead-manager/*": ["src/app/layout/modules/lead-manager/*"],
+      "@product-manager/*": ["src/app/layout/modules/product-manager/*"],
+      "@setting-manager/*": ["src/app/layout/modules/setting-manager/*"],
+      "@landing-manager/*": ["src/app/layout/modules/landing-manager/*"],
+      "@presentation-manager/*": [
+        "src/app/layout/modules/presentation-manager/*"
+      ],
+      "@builder-manager/*": ["src/app/layout/modules/builder-manager/*"],
+      "@update-manager/*": ["src/app/layout/modules/update-manager/*"],
+      "@test-manager/*": ["src/app/layout/modules/test-manager/*"]
+    },
+    "lib": ["es2020", "dom"]
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

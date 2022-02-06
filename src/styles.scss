@@ -1,0 +1,10 @@
+/*configuration*/
+// @import "./styles/00-configuration/00-root.scss";
+@import "./styles/00-configuration/root.scss";
+@import "./styles/00-configuration/01-fonts.scss";
+@import "./styles/00-configuration/02-tags.scss";
+/*theme*/
+@import "./styles/00-configuration/theme.scss";
+
+/*custom*/
+@import "./styles/02-custom/01-text.scss";

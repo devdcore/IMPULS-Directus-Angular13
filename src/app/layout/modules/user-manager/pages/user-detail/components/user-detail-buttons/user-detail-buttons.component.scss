@@ -1,0 +1,13 @@
+.sidebar_button--container {
+    min-height: 4.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--body-bg);
+}
+
+input_readonly--container,
+textarea:read-only {
+    background-color: orange !important;
+}

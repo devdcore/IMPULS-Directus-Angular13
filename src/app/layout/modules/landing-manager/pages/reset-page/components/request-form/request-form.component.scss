@@ -1,0 +1,57 @@
+.form__button--area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.form__button {
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.form__button--sign-in {
+  width: 40%;
+  background-color: #1e375b;
+  color: white;
+  font-weight: bold;
+}
+
+.form__button--forgot {
+  width: 50%;
+  background-color: transparent;
+  color: gray;
+  border: none;
+}
+
+.form_input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.5px solid gray;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.angular__error--area {
+  margin-top: 1rem;
+  background-color: red;
+  color: white;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.angular__error--area p {
+  margin: 0;
+  padding: 0;
+}
+
+.form__error {
+  color: red;
+}
+
+.form__button:disabled {
+  background-color: rgb(214, 214, 214);
+  color: white;
+  border: none;
+}

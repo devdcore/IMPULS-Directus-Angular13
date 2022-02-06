@@ -1,0 +1,36 @@
+<h1 class="form_title mb-3">Forgot password</h1>
+
+<form [formGroup]="form" [autocomplete]="'off'" (keyup)="handleKeyUp($event)">
+  <div>
+    <input
+      pInputText
+      class="min-w-full"
+      formControlName="email"
+      type="text"
+      placeholder="Email"
+      (click)="onRequestError()"
+      autocomplete="off"
+    />
+    <div class="form__error" *ngIf="formControlGetter['email'].errors">
+      <div *ngIf="formControlGetter['email'].errors['required']">
+        A valid email is required
+      </div>
+      <div *ngIf="formControlGetter['email'].errors['pattern']">
+        Email should have no spaces and a valid structure
+      </div>
+    </div>
+  </div>
+</form>
+<div class="form__button--area">
+  <button pButton (click)="onSubmit()" [disabled]="form['status'] == 'INVALID'">
+    Recover
+  </button>
+  <button pButton class="p-button-link" routerLink="/landing-manager/login">
+    Return to login
+  </button>
+</div>
+
+<div class="angular__error--area" [hidden]="!stateTemp.angularError.code">
+  <p>{{ stateTemp.angularError.code }}</p>
+  <p>{{ stateTemp.angularError.originalMessage }}</p>
+</div>

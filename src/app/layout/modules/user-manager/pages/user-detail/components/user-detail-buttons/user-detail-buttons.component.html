@@ -1,0 +1,69 @@
+<article class="sidebar_button--container">
+  <button class="btn button-blue button-sm" (click)="onReturnUserList()">
+    Return
+  </button>
+
+  <!-- ** VIEW ****************************************************** -->
+  <section *ngIf="stateTemp.userControl.userMode == 'view'">
+    <div class="sidebar_button--area">
+      <button class="btn button-green" (click)="onEditCurrentUser()">
+        Edit this user
+      </button>
+    </div>
+  </section>
+  <!-- ** NEW ****************************************************** -->
+  <section *ngIf="stateTemp.userControl.userMode == 'new'">
+    <div class="sidebar_button--area">
+      <button
+        class="btn button-gray button-wide button-sm"
+        *ngIf="!isUserFormValid()"
+      >
+        Save new user
+      </button>
+      <button
+        class="btn button-green"
+        *ngIf="isUserFormValid()"
+        (click)="onSaveNewUser()"
+      >
+        Save new user
+      </button>
+    </div>
+  </section>
+  <!-- ** EDIT ****************************************************** -->
+  <section *ngIf="stateTemp.userControl.userMode == 'edit'">
+    <div class="sidebar_button--area">
+      <button
+        class="btn button-gray button-wide button-sm"
+        *ngIf="!isUserFormValid()"
+      >
+        Save existing agency
+      </button>
+      <button
+        class="btn button-green"
+        *ngIf="isUserFormValid()"
+        (click)="onSaveExistingUser()"
+      >
+        Save existing agency
+      </button>
+    </div>
+  </section>
+  <!-- ** ARCHIVE ****************************************************** -->
+  <section *ngIf="stateTemp.userControl.userMode == 'archive'">
+    <div class="sidebar_button--area">
+      <button
+        class="btn button-green button-wide button-sm"
+        *ngIf="stateTemp.userControl.userSelected.status == 'published'"
+        (click)="onArchiveCurrentUser()"
+      >
+        Archive agency
+      </button>
+      <button
+        class="btn button-green button-wide button-sm"
+        *ngIf="stateTemp.userControl.userSelected.status == 'archived'"
+        (click)="onArchiveCurrentUser()"
+      >
+        Unarchive agency
+      </button>
+    </div>
+  </section>
+</article>

@@ -1,0 +1,105 @@
+// @import './sizes.scss';
+
+/**************
+* CONFIGURATION *
+***************/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* pass font size to percentage, and handle Rem format */
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: calc(15 / 735 * 100vh);
+}
+
+body {
+  font-family: "CircularStd", sans-serif;
+  font-size: --sh-15;
+  font-weight: 500;
+  // color: #7e7b7b;
+  overflow-x: hidden;
+  background: #e5e5e5;
+}
+
+h1 {
+  /* H1 */
+  font-family: CircularStd;
+  font-style: normal;
+  font-weight: bold;
+  font-size: --sh-36;
+  line-height:  --sh-34;
+  color: #000000;
+}
+
+h2,
+.h2 {
+  font-family: CircularStd;
+  font-style: normal;
+  font-weight: 500;
+  font-size:  --sh-28;
+  line-height: 90%;
+  /* or 25px */
+  color: #000000;
+}
+
+h3,
+.h3 {
+  font-family: CircularStd;
+  font-style: normal;
+  font-weight: normal;
+  font-size: --sh-34;
+  line-height: 90%;
+  /* identical to box height, or 31px */
+  color: #000000;
+}
+
+a {
+  font-family: CircularStd;
+  font-style: normal;
+  font-weight: 500;
+  font-size: --sh-15;
+  line-height: 130%;
+  /* or 23px */
+  color: #000000;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+padding: 0;
+  cursor: pointer;
+}
+
+input {
+  background-color: transparent;
+}
+
+input[type=text] {
+      font-size: calc(20 / 735 * 100vh);
+      // background-color: rgb(245, 231, 233);
+      padding-left: calc(5 / 735 * 100vh);
+      padding-right: calc(5 / 735 * 100vh);
+}
+
+
+:host ::ng-deep #table {
+  font-family: 'CircularStd', sans-serif;
+}

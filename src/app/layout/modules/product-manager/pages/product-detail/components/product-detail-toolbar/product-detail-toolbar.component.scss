@@ -1,0 +1,25 @@
+.toolbar_page--container {
+    min-height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--body-bg);
+}
+
+.toolbar_main--area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: lightgreen;
+}
+
+.toolbar_mode {
+    font-size: smaller;
+}
+
+.block {
+    display: block;
+}
+
+.button-thin {}

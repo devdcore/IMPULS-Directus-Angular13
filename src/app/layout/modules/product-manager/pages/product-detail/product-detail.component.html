@@ -1,0 +1,26 @@
+<div class="detail_page--subheader">
+    <article class="detail_page--headerlayout">
+        <product-detail-toolbar></product-detail-toolbar>
+        <product-detail-buttons></product-detail-buttons>
+    </article>
+</div>
+
+<div class="detail_page">
+    <main class="detail_page--area" *ngIf="stateTemp?.productControl?.productSelected">
+        <article class="detail_page--layout">
+            <section>
+                <product-detail-form></product-detail-form>
+            </section>
+
+            <section>
+                <product-detail-info></product-detail-info>
+
+                <!-- <div *ngIf="stateTemp.productControl.productMode == 'view'">
+        <product-detail-comission></product-detail-comission>
+      </div> -->
+            </section>
+        </article>
+
+        <article *ngIf="stateTemp.productControl.productMode != 'new'"></article>
+    </main>
+</div>

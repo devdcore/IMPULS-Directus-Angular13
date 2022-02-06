@@ -1,0 +1,10 @@
+.parent {
+    height: 90vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding-left: 20px;
+}
+
+.small {
+    font-size: 0.5rem;
+}

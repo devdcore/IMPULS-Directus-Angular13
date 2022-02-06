@@ -1,0 +1,162 @@
+<article *ngIf="stateTemp.angularError.originalMessage">
+  <p class="angular-error">{{ stateTemp.angularError.originalMessage }}</p>
+</article>
+<form
+  [formGroup]="stateTemp.userControl.userForm"
+  [autocomplete]="'off'"
+  (keyup)="handleKeyUp($event)"
+  *ngIf="userSelected.id"
+  class="form-container-scroll"
+>
+  <article class="form_container">
+    <section class="form_container--identification">
+      <div class="form-detail">
+        <label>First Name</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="first_name"
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+
+      <div class="form-detail">
+        <label>Last Name</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="last_name"
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+
+      <div class="form-detail">
+        <label>Email</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="email"
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+
+      <div class="form-detail">
+        <label>Phone</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="phone"
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+
+      <div class="form-detail">
+        <label>Type</label>
+        <div
+          [ngClass]="{
+            'input_edit--container': !getReadOnly(),
+            'input_readonly--container': getReadOnly()
+          }"
+        >
+          <!-- <ng-select
+            [items]="typeOptions"
+            bindLabel="name"
+            bindValue="id"
+            formControlName="userType"
+            [clearable]="false"
+            [hideSelected]="true"
+            [readonly]="getReadOnly()"
+            (change)="onFilterRole(formControlGetter['userType'].value)"
+            required
+          ></ng-select> -->
+        </div>
+      </div>
+
+      <div class="form-detail">
+        <label>Role</label>
+        <div
+          [ngClass]="{
+            'input_edit--container': !getReadOnly(),
+            'input_readonly--container': getReadOnly()
+          }"
+        >
+          <!-- <ng-select
+            [items]="roleOptions"
+            bindLabel="name"
+            bindValue="id"
+            formControlName="role"
+            [clearable]="false"
+            [hideSelected]="true"
+            [readonly]="getReadOnly()"
+            (change)="onPatchValueUser('role')"
+            required
+          ></ng-select> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="form_container--one_column">
+      <div
+        class="form-detail"
+        *ngIf="formControlGetter['userType'].value == 'agency'"
+      >
+        <label>Agency</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          (click)="openModal('custom-modal-1')"
+          formControlName="agencyId"
+          [readonly]="getReadOnly()"
+        />
+      </div>
+    </section>
+  </article>
+</form>
+
+<button (click)="openModal('custom-modal-1')">abrir modal 1</button>
+
+<button (click)="openModal('custom-modal-2')">abrir modal 2</button>
+
+<jw-modal id="custom-modal-1">
+  <header class="standard_modal">
+    <button class="btn button-green" (click)="closeModal('custom-modal-1')">
+      <div matTooltip="Archive agency">
+        <span class="material-icons table_icons--icon"> delete </span>
+      </div>
+    </button>
+    <h1>Select an agency</h1>
+  </header>
+  <user-detail-agencies></user-detail-agencies>
+</jw-modal>
+
+<jw-modal id="custom-modal-2">
+  <button
+    class="btn button-green"
+    (click)="closeModal('custom-modal-2')"
+  ></button>
+  <h1>Hola karina</h1>
+</jw-modal>

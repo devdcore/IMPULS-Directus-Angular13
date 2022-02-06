@@ -1,0 +1,33 @@
+body {
+  font-size: 0.8rem;
+}
+
+.form_title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.disabled {
+  color: gray;
+}
+
+.form__error {
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  color: red;
+}
+
+.p-button-label {
+  font-size: 0.8rem;
+}
+
+ng-untouched,
+ng-pristine,
+ng-invalid,
+.p-inputtext {
+  font-size: 0.8rem;
+}

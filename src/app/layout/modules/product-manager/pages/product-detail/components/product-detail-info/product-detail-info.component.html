@@ -1,0 +1,29 @@
+<div class="container-info-detail">
+  <div class="column-info-detail">
+    <label>Information</label>
+    <div class="row-info-detail">
+      <h3 class="h3-info-detail">LAST UPDATE</h3>
+      <span class="p-info-detail">{{ date_updated }}</span>
+    </div>
+    <div class="row-info-detail">
+      <h3 class="h3-info-detail">BY</h3>
+      <span class="p-info-detail">{{ user_updated }}</span>
+    </div>
+    <div class="row-info-detail">
+      <h3 class="h3-info-detail">STATUS</h3>
+      <span class="p-info-detail">{{ user_status }}</span>
+    </div>
+  </div>
+  <div class="column-info-detail">
+    <label>Status</label>
+
+    <!-- <mat-select class="select-info-detail">
+     <mat-option value="{{ item.label }}" [style.color]="item.color" [style.border-color]="item.color" *ngFor="let item of data">{{ item.label }}
+            </mat-option>
+    </mat-select>  -->
+
+    <div class="container-btn-info-detail">
+      <button class="btn-info-detail-copy">Save</button>
+    </div>
+  </div>
+</div>

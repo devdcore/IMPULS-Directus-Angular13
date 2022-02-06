@@ -1,0 +1,86 @@
+/**************
+* CONFIGURATION *
+***************/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* pass font size to percentage, and handle Rem format */
+html {
+  font-size: calc(15 / 735 * 100vh);
+}
+
+body {
+  font-family: "CircularStd", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  // color: #7e7b7b;
+  overflow-x: hidden;
+  background: #e5e5e5;
+}
+
+h1 {
+  /* H1 */
+  font-family: CircularStd;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 34px;
+  color: #000000;
+}
+
+h2,
+.h2 {
+  font-family: CircularStd;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 90%;
+  /* or 25px */
+  color: #000000;
+}
+
+h3,
+.h3 {
+  font-family: CircularStd;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 90%;
+  /* identical to box height, or 31px */
+  color: #000000;
+}
+
+a {
+  font-family: CircularStd;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 130%;
+  /* or 23px */
+  color: #000000;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+padding: 0;
+  cursor: pointer;
+}

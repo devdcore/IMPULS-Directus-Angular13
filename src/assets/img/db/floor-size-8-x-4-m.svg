@@ -1,0 +1,17 @@
+<svg width="888" height="772" viewBox="0 0 888 772" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F7FAFE" d="M.034 0h887.932v772H.034z"/>
+        <path stroke="#848B9A" stroke-width="5" d="M305.563 84.179h323.034v651.068H305.563z"/>
+        <path fill="#F7FAFE" d="M499.33 691.639v46.109h-67.187v-46.11z"/>
+        <path stroke="#848B9A" stroke-width="3" d="m430.167 735.772 52.697-43.475"/>
+        <path d="M499.662 737.089c1.859-19.825-4.18-35.195-18.116-46.11" stroke="#848B9A"/>
+        <path stroke="#848B9A" stroke-width="5" d="M293.24 84.973h-16.282V735.77h16.282M627.625 70.718V54.436H306.178v16.282"/>
+        <path fill="#F7FAFE" d="M446.635 34.253h40.84v40.84h-40.84zM256.928 389.952v40.84h40.84v-40.84z"/>
+        <text font-family="Inter-Medium, Inter" font-size="14" font-weight="400" letter-spacing="1.167" fill="#848B9A" transform="translate(.034)">
+                    <tspan x="455.749" y="57.538">4m</tspan>
+                </text>
+        <text transform="rotate(-90 275.355 410.355)" font-family="Inter-Medium, Inter" font-size="14" font-weight="400" letter-spacing="1.167" fill="#848B9A">
+                    <tspan x="263.567" y="415.872">8m</tspan>
+                </text>
+    </g>
+</svg>

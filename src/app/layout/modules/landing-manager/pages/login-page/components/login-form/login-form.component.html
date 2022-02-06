@@ -1,0 +1,72 @@
+<h1 class="form_title">Sign In</h1>
+
+<form [formGroup]="form" [autocomplete]="'off'" (keyup)="handleKeyUp($event)">
+  <article class="p-float-label my-1">
+    <input
+      pInputText
+      class="min-w-full"
+      formControlName="email"
+      type="text"
+      placeholder="Email"
+      (click)="onResetError()"
+      autocomplete="new-email"
+    />
+    <div
+      class="form__error"
+      *ngIf="
+        formControlGetter['email'].errors &&
+        !formControlGetter['email'].pristine
+      "
+    >
+      <div *ngIf="formControlGetter['email'].errors['required']">
+        A valid email is required
+      </div>
+      <div *ngIf="formControlGetter['email'].errors['pattern']">
+        Email should have no spaces and a valid structure
+      </div>
+    </div>
+  </article>
+
+  <article class="p-float-label my-1">
+    <input
+      pInputText
+      class="min-w-full"
+      formControlName="password"
+      type="password"
+      placeholder="Password"
+      (click)="onResetError()"
+      autocomplete="new-password"
+    />
+
+    <div
+      class="p-error block"
+      *ngIf="
+        formControlGetter['password'].errors &&
+        !formControlGetter['password'].pristine
+      "
+    >
+      <div *ngIf="formControlGetter['password'].errors['required']">
+        Password required
+      </div>
+    </div>
+  </article>
+</form>
+<div class="form__button--area">
+  <button
+    pButton
+    label="Sign In"
+    (click)="onSubmit()"
+    [disabled]="form['status'] == 'INVALID'"
+  ></button>
+  <button
+    pButton
+    class="p-button-link"
+    label="Forgot Password"
+    routerLink="/landing-manager/reset"
+  ></button>
+</div>
+
+<div class="p-error block m-1" [hidden]="!stateTemp.angularError.code">
+  <p>{{ stateTemp.angularError.code }}</p>
+  <p>{{ stateTemp.angularError.originalMessage }}</p>
+</div>

@@ -1,0 +1,20 @@
+<div class="detail_page--subheader">
+    <article class="detail_page--headerlayout">
+        <user-detail-toolbar></user-detail-toolbar>
+        <user-detail-buttons></user-detail-buttons>
+    </article>
+</div>
+
+<div class="detail_page">
+    <main class="detail_page--area" *ngIf="stateTemp?.userControl?.userSelected">
+        <article class="detail_page--layout">
+            <section>
+                <user-detail-form></user-detail-form>
+            </section>
+
+            <section>
+                <user-detail-info></user-detail-info>
+            </section>
+        </article>
+    </main>
+</div>

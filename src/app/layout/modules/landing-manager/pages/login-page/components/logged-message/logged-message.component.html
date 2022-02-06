@@ -1,0 +1,18 @@
+<p>
+  <span style="font-weight: 900"
+    >{{ stateTemp.accessControl.currentUser.first_name }}
+    {{ stateTemp.accessControl.currentUser.last_name }}</span
+  >
+  is currently authenticated.
+</p>
+<p>if you recognize this account, press continue.</p>
+
+<div class="form__button--area">
+  <button pButton class="p-button-link text-center" (click)="onLogout()">
+    Logout
+  </button>
+
+  <button pButton class="text-center" routerLink="/landing-manager/home">
+    Continue
+  </button>
+</div>

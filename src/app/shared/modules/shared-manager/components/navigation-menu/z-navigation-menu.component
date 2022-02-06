@@ -1,0 +1,81 @@
+<main class="main-menu">
+
+  <article class="menu_header--container">
+    <h2 class="menu_header--title">Main menu</h2>
+  </article>
+
+  <article class="menu_list--container">
+    <ul>
+      <li class="menu_list--li" (click)="goToRoute('/lead-manager', 'Leads')">
+          <a >
+              Leads
+          </a>
+      </li>
+      <li class="menu_list--li">
+          <a (click)="goToRoute('/agency-manager', 'Agencies')">
+              Agencies
+          </a>
+      </li>
+      <li class="menu_list--li">
+          <a (click)="goToRoute('/presentation-manager', 'Presentations')">
+              Presentations
+          </a>
+      </li>
+
+      <li class="menu_list--li">
+          <a (click)="goToRoute('/builder-manager', 'Builder')">
+              Builder
+          </a>
+      </li>
+      <li class="menu_list--li">
+          <a (click)="goToRoute('/product-manager', 'Products')">
+              Products
+          </a>
+      </li>
+      <li class="menu_list--li">
+        <a (click)="goToRoute('/quote-manager', 'Quotes')">
+            Quotes
+        </a>
+      </li>
+      <li class="menu_list--li">
+          <a (click)="goToRoute('/user-manager', 'Users')">
+              Users
+          </a>
+      </li>
+      <li class="menu_list--li">
+          <a (click)="goToRoute('/settings-manager', 'Settings')">
+              Settings
+          </a>
+      </li>
+    </ul>
+  </article>
+
+</main>
+
+<!-- <li>
+  <p class="menu-option-dropdown" (click)="seeBuilder()">
+    Builder
+    <span *ngIf="!TEMPLATE_LOGIC.isBuilder" class="material-icons">
+      arrow_drop_down
+    </span>
+    <span *ngIf="TEMPLATE_LOGIC.isBuilder" class="material-icons">
+      arrow_drop_up
+    </span>
+  </p>
+  <ul *ngIf="TEMPLATE_LOGIC.isBuilder">
+    <li>
+      <a (click)="goToRoute('/builder-manager', 'Sizes')">Sizes </a>
+    </li>
+    <li>
+      <a (click)="goToRoute('/builder-manager', 'Items')">Items</a>
+    </li>
+    <li>
+      <a (click)="goToRoute('/builder-manager', 'Textures')">Textures</a>
+    </li>
+    <li>
+      <a (click)="goToRoute('/builder-manager', 'Categories')"
+        >Categories</a
+      >
+    </li>
+  </ul>
+</li> -->

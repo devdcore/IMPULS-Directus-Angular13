@@ -1,0 +1,11 @@
+.base-shadow {
+  box-shadow: 8px 8px 24px -5px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 8px 8px 24px -5px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 8px 8px 24px -5px rgba(0, 0, 0, 0.65);
+}
+
+.base-shadow--small {
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.65);
+}

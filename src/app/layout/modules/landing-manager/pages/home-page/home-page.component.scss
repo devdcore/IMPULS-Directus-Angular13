@@ -1,0 +1,23 @@
+.login_page {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.login_page--grid {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+}
+
+.login_page--sidebar {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.login_img--area {
+  height: 100vh;
+  background-image: url("/assets/img/client/login-img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}

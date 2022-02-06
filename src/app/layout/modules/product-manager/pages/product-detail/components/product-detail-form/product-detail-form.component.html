@@ -1,0 +1,139 @@
+<article *ngIf="stateTemp.angularError.originalMessage">
+  <p class="angular-error">{{ stateTemp.angularError.originalMessage }}</p>
+</article>
+<form
+  [formGroup]="stateTemp.productControl.productForm"
+  [autocomplete]="'off'"
+  (keyup)="handleKeyUp($event)"
+  *ngIf="productSelected.id"
+  class="form-container-scroll"
+>
+  <article class="form_container">
+    <section class="form_container--identification">
+      <div class="form-detail">
+        <label>Product Name</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="productName"
+          matInput
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+
+      <div class="form-detail">
+        <label>Description</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="description"
+          matInput
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+
+      <div class="form-detail">
+        <label>Product Price</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="productPrice"
+          matInput
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+
+      <div class="form-detail">
+        <label>Subcategory</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="subcategoryId"
+          matInput
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+
+      <div class="form-detail">
+        <label>Size</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="size"
+          matInput
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+      <div class="form-detail">
+        <label>Depth</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="depth"
+          matInput
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+      <div class="form-detail">
+        <label>Width</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="width"
+          matInput
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+      <div class="form-detail">
+        <label>Comments</label>
+        <input
+          class="input_form--field"
+          [ngClass]="
+            !getReadOnly()
+              ? 'input_edit--container'
+              : 'input_readonly--container'
+          "
+          formControlName="comments"
+          matInput
+          required
+          [readonly]="getReadOnly()"
+        />
+      </div>
+    </section>
+  </article>
+</form>

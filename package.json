@@ -1,0 +1,71 @@
+{
+  "name": "builder-crm-angular-front",
+  "version": "1.0.1",
+  "scripts": {
+    "ng": "ng",
+    "postinstall": "node git-version",
+    "start": "node git-version.js; ng serve",
+    "start:dev": "reset && node git-version.js && ng serve",
+    "start:db": "json-server --watch src/shared/data/db.json",
+    "build": "node git-version.js && ng build --output-path=dist && node git-version.js",
+    "build:prod": "ng build --output-path=dist && node git-version.js",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "git-flow": "git flow init",
+    "kill:port": "kill -9 $(lsof -t -i:4200)",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "post-build": "node ./build/post-build.js",
+    "build:stats": "ng build --stats-json",
+    "analyze": "webpack-bundle-analyzer dist/stats.json",
+    "git:fix": "git rm -r --cached .; git add .; git commit -m 'Untracked files issue resolved to fix .gitignore'; ",
+    "generate-icons": "svg-generator"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~13.1.2",
+    "@angular/cdk": "^13.1.2",
+    "@angular/common": "~13.1.2",
+    "@angular/compiler": "~13.1.2",
+    "@angular/core": "~13.1.2",
+    "@angular/forms": "~13.1.2",
+    "@angular/platform-browser": "~13.1.2",
+    "@angular/platform-browser-dynamic": "~13.1.2",
+    "@angular/router": "~13.1.2",
+    "primeflex": "^3.1.2",
+    "primeicons": "^5.0.0",
+    "primeng": "^13.0.4",
+    "fs-extra": "^8.1.0",
+    "git-describe": "^4.1.0",
+    "moment": "^2.29.1",
+    "rxjs": "~7.4.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~13.1.3",
+    "@angular/cli": "~13.1.3",
+    "@angular/compiler-cli": "~13.1.2",
+    "@ngneat/svg-generator": "^2.0.0",
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^12.11.1",
+    "jasmine-core": "~3.10.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "typescript": "~4.4.3"
+  },
+  "svgGenerator": {
+    "outputPath": "./src/app/svg",
+    "prefix": "app",
+    "srcPath": "./src/assets/svg",
+    "svgoConfig": {
+      "plugins": [
+        "removeDimensions",
+        "cleanupAttrs"
+      ]
+    }
+  }
+}

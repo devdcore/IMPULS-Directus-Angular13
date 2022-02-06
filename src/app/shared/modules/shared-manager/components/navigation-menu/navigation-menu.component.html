@@ -1,0 +1,89 @@
+<main class="main-menu">
+  <article class="menu_header--container">
+    <h2 class="menu_header--title">Main menu</h2>
+  </article>
+
+  <article class="menu_list--container">
+    <ul>
+      <li *ngFor="let menu of mainMenu" class="menu_list--li">
+        <a
+          class="menu_list--text"
+          routerLinkActive="item_active"
+          [routerLink]="menu.path"
+        >
+          {{ menu.title }}
+        </a>
+
+        <ul
+          *ngIf="isActive(menu.path, menu.children)"
+          class="submenu_list--container"
+        >
+          <li *ngFor="let submenu of menu.children" class="menu_list--li">
+            <a
+              class="menu_list--text"
+              routerLinkActive="item_active"
+              [routerLink]="submenu.path"
+            >
+              {{ submenu.title }}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+
+  <article class="menu_logout--container">
+    <button class="menu_logout--btn" (click)="onLogout()">Logout</button>
+  </article>
+</main>
+
+<!-- <article class="menu_list--container">
+  <ul>
+    <li class="menu_list--li">
+        <a class="menu_list--text" routerLinkActive="item_active" [routerLink]="['/lead-manager']">
+          Leads
+        </a>
+
+        <ul>
+            <li class="menu_list--li">
+                <a class="menu_list--text" routerLinkActive="item_active" [routerLink]="['/builder-manager']">
+                  Builder
+                </a>
+            </li>
+            <li class="menu_list--li">
+                <a class="menu_list--text" routerLinkActive="item_active" [routerLink]="['/lead-manager']">
+                  Leads
+                </a>
+            </li>
+            <li class="menu_list--li">
+                <a class="menu_list--text" routerLinkActive="item_active" [routerLink]="['/agency-manager']">
+                  Agency
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="menu_list--li"  routerLinkActive="item_active" [routerLink]="['/agency-manager']">
+        Agencies
+    </li>
+    <li class="menu_list--li"  routerLinkActive="item_active" [routerLink]="['/presentation-manager']">
+        Presentations
+    </li>
+
+    <li class="menu_list--li"  routerLinkActive="item_active" [routerLink]="['/builder-manager']">
+        Builder
+    </li>
+    <li class="menu_list--li"  routerLinkActive="item_active" [routerLink]="['/product-manager']">
+      Products
+    </li>
+    <li class="menu_list--li" routerLinkActive="item_active" [routerLink]="['/quote-manager']">
+        Quotes
+    </li>
+    <li class="menu_list--li"  routerLinkActive="item_active" [routerLink]="['/user-manager']">
+        Users
+    </li>
+    <li class="menu_list--li"  routerLinkActive="item_active" [routerLink]="['/settings-manager']">
+        Settings
+    </li>
+  </ul>
+</article> -->

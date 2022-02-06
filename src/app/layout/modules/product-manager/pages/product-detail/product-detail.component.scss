@@ -1,0 +1,30 @@
+.detail_page {
+    background-color: var(--body-bg);
+    padding: 1rem;
+}
+
+.detail_page--area {
+    overflow: auto;
+    // padding: 0 1rem;
+    // margin-top: 1rem;
+}
+
+.detail_page--subheader {
+    overflow: auto;
+    padding: 0 1rem;
+    background-color: var(--body-bg);
+}
+
+.detail_page--headerlayout {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 1rem;
+    background-color: var(--body-bg);
+}
+
+.detail_page--layout {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 1rem;
+    background-color: var(--body-bg);
+}

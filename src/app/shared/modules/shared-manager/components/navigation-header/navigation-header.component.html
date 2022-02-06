@@ -1,0 +1,31 @@
+<main class="container-agency-header">
+  <div class="agency-header-general">
+    <ul class="menu-header">
+      <li>
+        <a
+          >{{ currentUser.first_name }} {{ currentUser.last_name
+          }}<span class="material-icons"> arrow_drop_down </span></a
+        >
+        <ul>
+          <li>
+            <a> {{ currentUser.userType }} user </a>
+          </li>
+          <li *ngIf="currentUser.userType == 'agency'">
+            <a>
+              {{
+                currentUser.userType == "agency" ? currentAgency.name : ""
+              }}</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="button_responsive--container">
+    <button class="button_responsive--btn">
+      <span class="material-icons icon-search" (click)="openCloseMenu()">
+        {{ stateTemp.sidebarControl.isShowSidebar ? "close" : "login" }}
+      </span>
+    </button>
+  </div>
+</main>

@@ -1,0 +1,19 @@
+.menu_button-container {
+  height: 40px;
+  width: 120px;
+  border: 2px solid #FFFFFF;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu_button-container:hover {
+  background-color: white;
+  color: black;
+}

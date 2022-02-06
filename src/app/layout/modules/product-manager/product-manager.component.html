@@ -1,0 +1,10 @@
+<main class="page_manager--container">
+    <article class="page_manager--sidenav" [ngClass]="{'page_manager--sidebar': stateTemp.sidebarControl.isShowSidebar}">
+        <navigation-sidebar></navigation-sidebar>
+    </article>
+
+    <article class="page_manager--content">
+        <navigation-header></navigation-header>
+        <router-outlet></router-outlet>
+    </article>
+</main>

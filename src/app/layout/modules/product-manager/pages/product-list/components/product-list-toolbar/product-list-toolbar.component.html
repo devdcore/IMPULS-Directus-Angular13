@@ -1,0 +1,48 @@
+<article class="list_toolbar">
+  <section class="list_toolbar--title_area">
+    <span class="h1">Products</span>
+    <p
+      class="small"
+      *ngIf="
+        stateTemp.agencyControl.agencyTotalCount ==
+        stateTemp.agencyControl.agencyFilterCount
+      "
+    >
+      {{ stateTemp.agencyControl.agencyTotalCount }} entries found
+    </p>
+    <p
+      class="small"
+      *ngIf="
+        !(
+          stateTemp.agencyControl.agencyTotalCount ==
+          stateTemp.agencyControl.agencyFilterCount
+        )
+      "
+    >
+      {{ stateTemp.agencyControl.agencyFilterCount }} entries found
+    </p>
+  </section>
+
+  <section class="flex-center">
+    <button
+      class="btn button-green"
+      matTooltip="Fiter options"
+      (click)="filterOptions()"
+    >
+      <div class="flex-center">
+        <i>filter_list</i>
+      </div>
+    </button>
+
+    <button
+      class="btn button-green"
+      matTooltip="Add new agency"
+      (click)="handleNew()"
+    >
+      <div class="flex-center">
+        <i>control_point</i>
+        <span>Add new product</span>
+      </div>
+    </button>
+  </section>
+</article>

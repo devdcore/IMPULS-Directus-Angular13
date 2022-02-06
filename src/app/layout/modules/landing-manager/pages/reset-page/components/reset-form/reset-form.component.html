@@ -1,0 +1,53 @@
+<h1 class="form_title">Reset Password</h1>
+
+<form [formGroup]="form" [autocomplete]="'off'" (keyup)="handleKeyUp($event)">
+  <div>
+    <div>
+      pInputText class="min-w-full" formControlName="password" type="password"
+      placeholder="Password" (click)="onResetError()" />
+      <div class="form__error" *ngIf="formControlGetter['password'].errors">
+        <div *ngIf="formControlGetter['password'].errors['required']">
+          Password required
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <input
+        class="form_input"
+        formControlName="passwordRepeat"
+        type="password"
+        placeholder="Repeat password"
+        (click)="onResetError()"
+      />
+      <div
+        class="form__error"
+        *ngIf="formControlGetter['passwordRepeat'].errors"
+      >
+        <div *ngIf="formControlGetter['passwordRepeat'].errors['required']">
+          Password required
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<div class="form__button--area">
+  <button
+    class="form__button form__button--sign-in"
+    (click)="onSubmit()"
+    [disabled]="form['status'] == 'INVALID'"
+  >
+    Recover
+  </button>
+  <button
+    class="form__button form__button--forgot"
+    routerLink="/landing-manager/login"
+  >
+    Return to login
+  </button>
+</div>
+
+<div class="angular__error--area" [hidden]="!stateTemp.angularError.code">
+  <p>{{ stateTemp.angularError.code }}</p>
+  <p>{{ stateTemp.angularError.originalMessage }}</p>
+</div>

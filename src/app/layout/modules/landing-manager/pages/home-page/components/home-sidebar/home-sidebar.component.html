@@ -1,0 +1,11 @@
+<div class="login__form--area">
+  <landing-header></landing-header>
+
+  <div *ngIf="stateTemp.accessControl.isLogged">
+    <home-menu></home-menu>
+  </div>
+
+  <div>
+    <landing-footer></landing-footer>
+  </div>
+</div>

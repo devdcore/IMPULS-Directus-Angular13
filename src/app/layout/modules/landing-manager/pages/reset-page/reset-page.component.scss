@@ -1,0 +1,61 @@
+.reset_page {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.reset__form--area {
+    height: 100%;
+    padding: 2vw 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reset_page-grid {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+}
+
+.reset_img--area {
+    height: 100vh;
+    background-image: url("/assets/img/client/recovery-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.reset_img-block {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset__img--logo {
+    height: 20vh;
+    display: block;
+    width: 60%;
+}
+
+.reset_img--footer-area {
+    position: absolute;
+    bottom: 1vh;
+    margin-left: 25%;
+    margin-right: auto;
+}
+
+.reset_img--footer-block {
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset_img--footer-block p {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+}

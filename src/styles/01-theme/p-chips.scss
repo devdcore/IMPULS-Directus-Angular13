@@ -1,0 +1,36 @@
+.p-chips .p-chips-multiple-container {
+  padding: 0.25rem 0.75rem;
+}
+.p-chips .p-chips-multiple-container:not(.p-disabled):hover {
+  border-color: #3f4b5b;
+}
+.p-chips .p-chips-multiple-container:not(.p-disabled).p-focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 1px #e3f3fe;
+  border-color: #8dd0ff;
+}
+.p-chips .p-chips-multiple-container .p-chips-token {
+  padding: 0.25rem 0.75rem;
+  margin-right: 0.5rem;
+  background: #8dd0ff;
+  color: #151515;
+  border-radius: var(--border-radius-field);
+}
+.p-chips .p-chips-multiple-container .p-chips-token .p-chips-token-icon {
+  margin-left: 0.5rem;
+}
+.p-chips .p-chips-multiple-container .p-chips-input-token {
+  padding: 0.25rem 0;
+}
+.p-chips .p-chips-multiple-container .p-chips-input-token input {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.87);
+  padding: 0;
+  margin: 0;
+}
+
+p-chips.ng-dirty.ng-invalid > .p-chips > .p-inputtext {
+  border-color: var(--danger-color);
+}

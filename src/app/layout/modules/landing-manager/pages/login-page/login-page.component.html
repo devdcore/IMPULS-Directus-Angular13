@@ -1,0 +1,34 @@
+<main class="login_page">
+
+    <article class="login_page-grid">
+        <section class="login__form--area">
+            <landing-header></landing-header>
+            <div *ngIf="!stateTemp.accessControl.isLogged">
+                <login-form></login-form>
+            </div>
+
+            <div *ngIf="stateTemp.accessControl.isLogged">
+              <logged-message></logged-message>
+          </div>
+
+            <div>
+                <landing-footer></landing-footer>
+            </div>
+
+        </section>
+
+        <!-- Photo -->
+        <section class="login_img--area">
+            <div class="login_img-block">
+                <img class="login__img--logo" src="/assets/img/client/logo_blue.svg" alt>
+            </div>
+
+            <div class="login_img--footer-area">
+                <div class="login_img--footer-block">
+                    <p>The Best Business Real State Opportunity</p>
+                </div>
+            </div>
+        </section>
+
+    </article>
+</main>

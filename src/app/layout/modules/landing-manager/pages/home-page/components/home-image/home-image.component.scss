@@ -1,0 +1,35 @@
+.login_img-block {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login__img--logo {
+    height: 20vh;
+    display: block;
+    width: 60%;
+}
+
+.login_img--footer-area {
+    position: absolute;
+    bottom: 1vh;
+    margin-left: 25%;
+    margin-right: auto;
+}
+
+.login_img--footer-block {
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_img--footer-block p {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+}

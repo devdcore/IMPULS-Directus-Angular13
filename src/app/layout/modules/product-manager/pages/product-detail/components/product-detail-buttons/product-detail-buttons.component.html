@@ -1,0 +1,47 @@
+<article class="sidebar_button--container">
+    <button class="btn button-blue button-sm" (click)="onReturnProductList()">
+    Return
+  </button>
+
+    <!-- ** VIEW ****************************************************** -->
+    <section *ngIf="stateTemp.agencyControl.agencyMode == 'view'">
+        <div class="sidebar_button--area">
+            <button class="btn button-green" (click)="onEditCurrentProduct()">
+        Edit this agency
+      </button>
+        </div>
+    </section>
+    <!-- ** NEW ****************************************************** -->
+    <section *ngIf="stateTemp.agencyControl.agencyMode == 'new'">
+        <div class="sidebar_button--area">
+            <button class="btn button-gray button-wide button-sm" *ngIf="!isProductFormValid()">
+        Save new agency
+      </button>
+            <button class="btn button-green" *ngIf="isProductFormValid()" (click)="onSaveNewProduct()">
+        Save new agency
+      </button>
+        </div>
+    </section>
+    <!-- ** EDIT ****************************************************** -->
+    <section *ngIf="stateTemp.agencyControl.agencyMode == 'edit'">
+        <div class="sidebar_button--area">
+            <button class="btn button-gray button-wide button-sm" *ngIf="!isProductFormValid()">
+        Save existing agency
+      </button>
+            <button class="btn button-green" *ngIf="isProductFormValid()" (click)="onSaveExistingProduct()">
+        Save existing agency
+      </button>
+        </div>
+    </section>
+    <!-- ** ARCHIVE ****************************************************** -->
+    <section *ngIf="stateTemp.agencyControl.agencyMode == 'archive'">
+        <div class="sidebar_button--area">
+            <button class="btn button-green button-wide button-sm" *ngIf="stateTemp.agencyControl.agencySelected.status == 'published'" (click)="onArchiveCurrentProduct()">
+        Archive agency
+      </button>
+            <button class="btn button-green button-wide button-sm" *ngIf="stateTemp.agencyControl.agencySelected.status == 'archived'" (click)="onArchiveCurrentProduct()">
+        Unarchive agency
+      </button>
+        </div>
+    </section>
+</article>
